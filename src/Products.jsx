@@ -54,7 +54,7 @@ const Products = () => {
   useEffect(() => {
     dispatch(setsubcategoryloader(true)); 
     dispatch(asyncgetsubcategory(`/sub-categories?[filters][categories][id][$eq]=${catId}`));
-  }, []) ;
+  }, [catId]) ;
 
   const handleChange = (e) => {
     const value = e.target.value ;
