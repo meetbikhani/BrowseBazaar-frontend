@@ -46,7 +46,7 @@ const Products = () => {
   }, [screenChanged]);
 
   var catId = parseInt(useParams().id) ;
-
+  const [refresh, setrefresh] = useState(false) ;
   const data = useSelector((state) => state.subcategory.newSubCategory) ;
   const loader = useSelector((state) => state.subcategory.loader) ;
     const dispatch = useDispatch() ;
@@ -57,6 +57,7 @@ var loc = useLocation();
     setSelectedSubCats([]);
     setSort(null);
     setMaxPrice(1000);
+    setrefresh((prev) => !prev);
     dispatch(setsubcategoryloader(true)); 
     dispatch(asyncgetsubcategory(`/sub-categories?[filters][categories][id][$eq]=${catId}`));
     
@@ -143,7 +144,7 @@ var loc = useLocation();
         </div>
       </div>
       <div className="right-section">
-        <List selectedSubCats={selectedSubCats} catId={catId} maxPrice={maxPrice} sort={sort} setwindowUp={setwindowUp} />
+        <List refresh={refresh} selectedSubCats={selectedSubCats} catId={catId} maxPrice={maxPrice} sort={sort} setwindowUp={setwindowUp} />
       </div>
     </div>
   );
