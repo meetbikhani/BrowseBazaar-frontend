@@ -14,10 +14,7 @@ const Services = () => {
             <img className='img' src='https://www.boat-lifestyle.com/cdn/shop/files/Group_334303_small.svg?v=1682336123'></img>
             <h1 className='name'>Free Shipping</h1>
         </div>
-        <div className='inside'>
-            <img className='img' src='https://www.boat-lifestyle.com/cdn/shop/files/Group_334302_small.svg?v=1682336123'></img>
-            <h1 className='name'>GST Billing</h1>
-        </div>
+        
     </div>
     </>
   )
