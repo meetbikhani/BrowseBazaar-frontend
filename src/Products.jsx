@@ -52,11 +52,12 @@ const Products = () => {
     // console.log(data) ;
 
   useEffect(() => {
-    dispatch(setsubcategoryloader(true)); 
-    dispatch(asyncgetsubcategory(`/sub-categories?[filters][categories][id][$eq]=${catId}`));
     setSelectedSubCats([]);
     setSort(null);
     setMaxPrice(1000);
+    dispatch(setsubcategoryloader(true)); 
+    dispatch(asyncgetsubcategory(`/sub-categories?[filters][categories][id][$eq]=${catId}`));
+    
   }, [catId]) ;
 
   const handleChange = (e) => {
