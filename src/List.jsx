@@ -6,7 +6,7 @@ import { asyncgetfilterproducts } from "./actions/FilterProductActions";
 import Loader from "./Loader";
 import { setloader } from "./Features/FilterProductSlice";
 
-const List = ({ selectedSubCats, catId, maxPrice, sort, setwindowUp }) => {
+const List = ({ refresh, selectedSubCats, catId, maxPrice, sort, setwindowUp }) => {
   const data = useSelector((state) => state.filterproduct.FilterProducts);
   const loader = useSelector((state) => state.filterproduct.loader);
   const dispatch = useDispatch();
@@ -22,7 +22,7 @@ const List = ({ selectedSubCats, catId, maxPrice, sort, setwindowUp }) => {
         }`
       )
     );
-  }, [selectedSubCats, catId, maxPrice, sort]);
+  }, [selectedSubCats, catId, maxPrice, sort, refresh]);
 
 
 
