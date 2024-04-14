@@ -15,7 +15,7 @@ export const asyncgetproducts = (url) => async (dispatch,getstate) => {
             }
           );
           
-          dispatch(getproducts(data.data.data)) ;
+          dispatch(getproducts(data?.data?.data)) ;
     }
     catch(err){
         console.log(err);

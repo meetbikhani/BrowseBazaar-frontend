@@ -106,9 +106,9 @@ const Related = ({ productId, CatId, subCatId }) => {
         >
           {data.map((item) => {
             return (
-              <Link className="" key={item.id} to={`/product/${item.id}`}>
+              <Link className="" key={item?.id} to={`/product/${item?.id}`}>
                 <div className="overflow-none productSliderCard">
-                  <Card id={item.id} data={item} />
+                  <Card id={item?.id} data={item} />
                 </div>
               </Link>
             );

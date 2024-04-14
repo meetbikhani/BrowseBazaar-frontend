@@ -8,7 +8,7 @@ const Card = ({ data, id }) => {
   const cartdata = useSelector((state) => state.cart.products);
   const [isInCart, setIsInCart] = useState(false);
   const cartCheck = () => {
-    if (cartdata.find((item) => item.id === id)) {
+    if (cartdata.find((item) => item?.id === id)) {
       setIsInCart(true);
     } else {
       setIsInCart(false);

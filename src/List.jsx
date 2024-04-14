@@ -36,8 +36,8 @@ const List = ({ selectedSubCats, catId, maxPrice, sort, setwindowUp }) => {
         <div className="flex flex-wrap gap-10 justify-evenly">
           {data.map((item) => {
             return (
-              <Link key={item.id} to={`/product/${item.id}`}>
-                <Card id={item.id} data={item} />
+              <Link key={item?.id} to={`/product/${item?.id}`}>
+                <Card id={item?.id} data={item} />
               </Link>
             );
         })}{ setwindowUp(false)}

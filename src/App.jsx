@@ -13,7 +13,7 @@ import Footer from "./Footer";
 import Products from "./Products";
 import Product from "./Product";
 import { useEffect } from "react";
-import Checkout from "./Checkout";
+
 import ThankYou from "./ThankYou";
 import PaymentFailed from "./PaymentFailed";
 import { useSelector, useDispatch } from "react-redux";
@@ -53,10 +53,6 @@ const router = createBrowserRouter([
       {
         path: "/product/:id",
         element: <Product />,
-      },
-      {
-        path: "/checkout",
-        element: <Checkout />,
       },
       {
         path: "/success",

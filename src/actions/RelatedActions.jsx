@@ -16,8 +16,8 @@ export const asyncgetrelated = (url) => async (dispatch,getstate) => {
               },
             }
           );
-          // console.log("related ka data",data.data.data);
-          dispatch(getrelated(data.data.data)) ;
+          
+          dispatch(getrelated(data?.data?.data)) ;
     }
     catch(err){
         console.log(err);

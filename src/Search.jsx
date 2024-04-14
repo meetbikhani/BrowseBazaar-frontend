@@ -42,11 +42,11 @@ const Search = ({ setSearchModal }) => {
                 <div className="search-results">
                     
                         {data.map(item =>{
-                            return <div key={item.id}
+                            return <div key={item?.id}
                             className="search-result-item flex"
                             
                             onClick={() => {
-                                navigate(`/product/${item.id}`);
+                                navigate(`/product/${item?.id}`);
                                 setSearchModal(false);
                             }}
                         >

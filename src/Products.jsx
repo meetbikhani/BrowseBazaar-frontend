@@ -76,16 +76,16 @@ const Products = () => {
             <Loader />
           </div> : <>
           {data.map((item)=>{
-            return <div key={item.id} className="mb-1 ml-1">
+            return <div key={item?.id} className="mb-1 ml-1">
             <input
               className="mr-2 select-box"
               type="checkbox"
-              id={item.id}
-              value={item.id}
+              id={item?.id}
+              value={item?.id}
               onChange={handleChange}
             />
-            <label className="label-text" htmlFor={item.id}>
-              {item.attributes.name}
+            <label className="label-text" htmlFor={item?.id}>
+              {item?.attributes?.name}
             </label>
           </div>
           })}

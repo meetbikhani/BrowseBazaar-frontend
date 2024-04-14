@@ -17,7 +17,7 @@ export const asyncgetsubcategory = (url) => async (dispatch,getstate) => {
             }
           );
           
-          dispatch(getsubcategory(data.data.data)) ;
+          dispatch(getsubcategory(data?.data?.data)) ;
     }
     catch(err){
         console.log(err);

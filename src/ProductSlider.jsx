@@ -111,9 +111,9 @@ const ProductSlider = ({ title }) => {
         >
           {data.map((item) => {
             return (
-              <Link key={item.id} className="" to={`/product/${item.id}`}>
+              <Link key={item?.id} className="" to={`/product/${item?.id}`}>
                 <div className="overflow-none productSliderCard">
-                  <Card id={item.id} data={item} />
+                  <Card id={item?.id} data={item} />
                 </div>
               </Link>
             );

@@ -29,24 +29,24 @@ const Cart = ({ setOpen }) => {
     if (data) localStorage.setItem("cart", JSON.stringify(data));
     localStorage.setItem("total", JSON.stringify(total));
   }, [data]);
-  console.log("data lelo", data);
+  // console.log("data lelo", data);
   const handlepayment = async () => {
     try {
       setloader(true);
       const stripe = await stripePromise;
-      console.log(1);
+      // console.log(1);
       const res = await makeRequest.post("/orders", {
         cart: data, // wapis a jana plz
       });
-      console.log(2);
-      console.log(res.data);
+      // console.log(2);
+      // console.log(res.data);
       await stripe.redirectToCheckout({
         sessionId: res.data.stripeSession.id,
       });
-      console.log(3);
+      // console.log(3);
     } catch (err) {
       setloader(false);
-      console.log(4);
+      // console.log(4);
       console.log(err);
     }
   };
@@ -72,25 +72,25 @@ const Cart = ({ setOpen }) => {
             <div className="cart-middle">
               {data.map((item) => (
                 <div
-                  key={item.id}
+                  key={item?.id}
                   className="mb-5 px-4 flex gap-3 justify-start align-middle relative rounded "
                 >
                   <img
                     className="h-[12vh] w-[20%] rounded-md"
-                    src={item.img}
+                    src={item?.img}
                   ></img>
                   <div>
                     <h1 className="text-lg font-semibold ">
-                      {item.title.length >= 35
-                        ? item.title.substring(0, 36) + "..."
-                        : item.title}
+                      {item?.title?.length >= 35
+                        ? item?.title?.substring(0, 36) + "..."
+                        : item?.title}
                     </h1>
                     <p className=" text-sm mb-5">
-                      {item.description?.slice(0, 100) + "..."}
+                      {item?.description?.slice(0, 100) + "..."}
                     </p>
                     <div className="flex justify-between px-4">
                       <div className="basis-1/3">
-                        {item.quantity} X {item.price}
+                        {item?.quantity} X {item?.price}
                       </div>
                       <div className="basis-fit flex gap-[1px] border-[1px] border-zinc-400 ">
                         <button
@@ -98,8 +98,8 @@ const Cart = ({ setOpen }) => {
                           onClick={() =>
                             dispatch(
                               setProductQuantity({
-                                id: item.id,
-                                quantity: item.quantity - 1,
+                                id: item?.id,
+                                quantity: item?.quantity - 1,
                                 flag: false,
                               })
                             )
@@ -108,15 +108,15 @@ const Cart = ({ setOpen }) => {
                           -
                         </button>
                         <div className="border-[1px]  border-zinc-400 px-2 py-0 flex items-center justify-center">
-                          {item.quantity}
+                          {item?.quantity}
                         </div>
                         <button
                           className="border-[1px] border-zinc-400 px-2 py-0 flex items-center justify-center"
                           onClick={() =>
                             dispatch(
                               setProductQuantity({
-                                id: item.id,
-                                quantity: item.quantity + 1,
+                                id: item?.id,
+                                quantity: item?.quantity + 1,
                                 flag: true,
                               })
                             )
@@ -128,7 +128,7 @@ const Cart = ({ setOpen }) => {
                     </div>
                     <FaTrash
                       onClick={() => {
-                        dispatch(removefromcart({ id: item.id }));
+                        dispatch(removefromcart({ id: item?.id }));
                         dispatch(getTotal());
                       }}
                       className=" absolute top-1 right-5 text-red-600 text-lg cursor-pointer"

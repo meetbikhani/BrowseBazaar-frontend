@@ -16,7 +16,7 @@ export const asyncgetfilterproducts = (url) => async (dispatch,getstate) => {
             }
           );
           
-          dispatch(getfilterproducts(data.data.data)) ;
+          dispatch(getfilterproducts(data?.data?.data)) ;
     }
     catch(err){
         console.log(err);
