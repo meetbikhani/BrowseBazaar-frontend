@@ -63,7 +63,7 @@ const Cart = ({ setOpen }) => {
       </div>
       {/* Set condition for showing cart items or empty cart */}
       {data.length === 0 ? (
-        <EmtyCart />
+        <EmtyCart setOpen={setOpen} />
       ) : (
         <>
           {loader ? (
