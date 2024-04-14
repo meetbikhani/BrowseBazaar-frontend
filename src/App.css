@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* background-color: floralwhite; */
+  box-sizing: border-box;
+  /* overflow: hidden; */
+  user-select: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
+:root::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}

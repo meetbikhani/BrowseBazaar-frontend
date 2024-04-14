@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Angkor&display=swap');
+
+.main {
+    height: 6vh;
+    width: 100%;
+    /* z-index: 9999999999; */
+    /* position: sticky;  */
+    background-color: white    ;
+  }
+  
+  .main2 {
+    height: 100%;
+    /* background-color: white; */
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+  }
+  .website_name{
+    font-family: "Angkor", serif;
+    font-weight: 20%;
+    font-style: normal;
+    font-size: xx-large;
+    margin-top: 6px;
+  }
+  .logo{
+    width: 35px;
+    height: 40px;
+    margin-top: -5px;
+  }
+  .search,
+  .cart,
+  .profile {
+    height: 30px;
+    width: 30px;
+  }
+  .drop{
+    height: 30px;
+    width: 30px;
+    margin-top: 5px;
+  }
+  .cart_div{
+    position: relative;
+  }
+  .cart_span{
+    display: block;
+    height: 20px;
+    position: absolute;
+    top: -17px;
+    font-size: 1rem;
+    right: 0px;
+    
+  }
+  .left{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    /* background-color: grey;
+    padding: 2px;
+    border-radius: 10%; */
+  }
+  .categories {
+    list-style: none;
+    /* text-align: center; */
+  }
+  
+  .list {
+    position: relative;
+  }
+  
+  .list a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set text color to black */
+  }
+  
+  .dropdown {
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    display: none;
+    z-index: 999;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0; /* Add padding to top and bottom */
+    /* border: 1px solid rgb(45, 43, 43); */
+  }
+  
+  .dropdown li {
+    border-bottom: none; /* Remove border from bottom */
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .list:hover .dropdown {
+    display: block;
+  }
+  
+
+
+  .cattext{
+    font-size: x-large;
+  }
+
+  @media screen and (max-width: 850px) {
+    .website_name {
+      display: none;
+    }
+  
+    
+  }
+  

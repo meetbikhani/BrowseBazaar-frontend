@@ -1,0 +1,30 @@
+.outer{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.inside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    /* background-color: aquamarine; */
+}
+
+.img{
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+}
+
+.name{
+    font-size: 15px;
+    font-weight: 500;
+}

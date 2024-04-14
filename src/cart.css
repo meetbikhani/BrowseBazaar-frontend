@@ -1,0 +1,53 @@
+.cart-outside{
+    position: fixed;
+    top: 6%;
+    right: 1%;
+    /* padding: 0.5%; */
+    z-index: 99999;
+    background-color: rgb(255, 255, 255);
+
+    /* background-color: rgba(241, 33, 33, 0.744); */
+    /* height: 500px; */
+    width: 500px;
+    max-height: 93vh;
+    overflow: auto;
+    border: 1px solid rgb(8, 8, 8);
+}
+.cart-middle{
+    max-height: 65vh;
+    overflow: auto;
+    /* scrollbar-color: red; */
+    /* scrollbar-width: 20px; */
+}
+
+
+@media (max-width: 550px) {
+    .cart-outside{
+        width: 100%;
+    }
+}
+
+/* width and height for the scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f0f0f0; /* light gray */
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #c1c1c1; /* light gray */
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8; /* slightly darker gray */
+  }
+  
+  

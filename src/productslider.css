@@ -1,0 +1,29 @@
+.productSliderCard{
+  width: 300px;
+}
+.custom-button-group-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    left:0% ;
+  }
+  .custom-button-group-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right:0% ;
+    display: flex;
+  }
+  
+  .custom-arrow-button {
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  
