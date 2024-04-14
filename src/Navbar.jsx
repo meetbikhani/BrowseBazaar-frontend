@@ -67,7 +67,7 @@ const Navbar = () => {
               </ul>
             </li>
           </ul>
-          <Link to={"/success"} className="center sm:mr-5">
+          <Link to={"/"} className="center sm:mr-5">
             <img className="logo" src={logo} alt="Logo" />
             <h1 className="website_name cursor-pointer">BROWSE-BAZAAR</h1>
           </Link>
