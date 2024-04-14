@@ -83,7 +83,7 @@ const Related = ({ productId, CatId, subCatId }) => {
           customButtonGroup={<CustomButtonGroup />}
           additionalTransfrom={0}
           autoPlay={true}
-          autoPlaySpeed={3000}
+          autoPlaySpeed={2000}
           centerMode={false}
           containerClass="container-with-dots"
           dotListClass=""
