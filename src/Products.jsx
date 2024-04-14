@@ -57,11 +57,11 @@ var loc = useLocation();
     setSelectedSubCats([]);
     setSort(null);
     setMaxPrice(1000);
-    setrefresh((prev) => !prev);
+    
     dispatch(setsubcategoryloader(true)); 
     dispatch(asyncgetsubcategory(`/sub-categories?[filters][categories][id][$eq]=${catId}`));
     
-  }, [catId , loc]) ;
+  }, [catId , loc, refresh]) ;
 
   const handleChange = (e) => {
     const value = e.target.value ;
@@ -144,7 +144,7 @@ var loc = useLocation();
         </div>
       </div>
       <div className="right-section">
-        <List refresh={refresh} selectedSubCats={selectedSubCats} catId={catId} maxPrice={maxPrice} sort={sort} setwindowUp={setwindowUp} />
+        <List setrefresh={setrefresh} selectedSubCats={selectedSubCats} catId={catId} maxPrice={maxPrice} sort={sort} setwindowUp={setwindowUp} />
       </div>
     </div>
   );
