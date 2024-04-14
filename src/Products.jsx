@@ -54,6 +54,9 @@ const Products = () => {
   useEffect(() => {
     dispatch(setsubcategoryloader(true)); 
     dispatch(asyncgetsubcategory(`/sub-categories?[filters][categories][id][$eq]=${catId}`));
+    setSelectedSubCats([]);
+    setSort(null);
+    setMaxPrice(1000);
   }, [catId]) ;
 
   const handleChange = (e) => {
