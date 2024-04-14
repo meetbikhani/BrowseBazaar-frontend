@@ -87,7 +87,7 @@ const ProductSlider = ({ title }) => {
           arrows={false}
           customButtonGroup={<CustomButtonGroup />}
           additionalTransfrom={0}
-          autoPlaySpeed={3000}
+          autoPlaySpeed={2000}
           centerMode={false}
           containerClass="container-with-dots"
           dotListClass=""
