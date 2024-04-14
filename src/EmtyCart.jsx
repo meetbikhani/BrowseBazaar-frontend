@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 
-const EmtyCart = () => {
+const EmtyCart = ({setOpen}) => {
   const navigate = useNavigate();
   return (
     <div className="w-full h-full flex  flex-col">
@@ -21,6 +21,7 @@ const EmtyCart = () => {
       <button
         onClick={() => {
           navigate("/");
+          setOpen(false);
         }}
         className="bg-blue-500 hover:bg-blue-700 w-40 mx-auto my-4 text-white font-bold py-2 px-4 rounded-full"
       >
