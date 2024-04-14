@@ -22,7 +22,7 @@ const List = ({ setrefresh, selectedSubCats, catId, maxPrice, sort, setwindowUp 
         }`
       )
     );
-  }, [selectedSubCats, catId, maxPrice, sort, refresh]);
+  }, [selectedSubCats, catId, maxPrice, sort]);
 
 useEffect(() => {
     setrefresh((prev) => !prev)
