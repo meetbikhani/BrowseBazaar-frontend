@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { asyncgetsubcategory } from "./actions/SubCategoryActions";
 import Loader from './Loader'
 import { setsubcategoryloader } from "./Features/SubCategorySlice";
+import { useLocation } from "react-router-dom";
 
 const Products = () => {
   const [windowUp, setwindowUp] = useState(true)
@@ -50,7 +51,8 @@ const Products = () => {
   const loader = useSelector((state) => state.subcategory.loader) ;
     const dispatch = useDispatch() ;
     // console.log(data) ;
-
+var loc = useLocation();
+   loc = loc.pathname[loc.pathname.length - 1];
   useEffect(() => {
     setSelectedSubCats([]);
     setSort(null);
@@ -58,7 +60,7 @@ const Products = () => {
     dispatch(setsubcategoryloader(true)); 
     dispatch(asyncgetsubcategory(`/sub-categories?[filters][categories][id][$eq]=${catId}`));
     
-  }, [catId]) ;
+  }, [catId , loc]) ;
 
   const handleChange = (e) => {
     const value = e.target.value ;
