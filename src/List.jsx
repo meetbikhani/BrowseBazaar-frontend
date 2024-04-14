@@ -29,11 +29,11 @@ const List = ({ selectedSubCats, catId, maxPrice, sort, setwindowUp }) => {
   return (
     <>
       {loader ? (
-        <div className="flex h-full items-center  justify-center">
+        <div className="flex h-[90vh] items-center  justify-center">
           <Loader />
         </div>
       ) : (
-        <div className="flex flex-wrap gap-10 justify-evenly">
+        <div className="flex min-h-[80vh] flex-wrap gap-10 justify-evenly">
           {data.map((item) => {
             return (
               <Link key={item?.id} to={`/product/${item?.id}`}>
