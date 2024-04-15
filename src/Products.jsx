@@ -34,10 +34,10 @@ const Products = () => {
 
   
 
-  // useEffect(() => {
-  //   // Scroll to the top of the outlet when the component mounts or updates
-  //   window.scrollTo(0, 0);
-  // }, [windowUp]);
+  useEffect(() => {
+    // Scroll to the top of the outlet when the component mounts or updates
+    window.scrollTo(0, 0);
+  }, [windowUp]);
   // useEffect(() => {
   //   // Reload the page only if the screen size changes from mobile to non-mobile or vice versa
   //   if (screenChanged) {
