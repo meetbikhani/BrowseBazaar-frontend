@@ -13,37 +13,37 @@ const Products = () => {
   const [maxPrice, setMaxPrice] = useState(1000);
   const [sort, setSort] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 630);
-  const [screenChanged, setScreenChanged] = useState(false);
+  // const [screenChanged, setScreenChanged] = useState(false);
   const [selectedSubCats, setSelectedSubCats] = useState([]);
 
-  useEffect(() => {
-    // Function to update isMobile state when window is resized
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 630);
-      setScreenChanged(true);
-    };
+  // useEffect(() => {
+  //   // Function to update isMobile state when window is resized
+  //   const handleResize = () => {
+  //     setIsMobile(window.innerWidth <= 630);
+  //     setScreenChanged(true);
+  //   };
 
-    // Add event listener for window resize
-    window.addEventListener("resize", handleResize);
+  //   // Add event listener for window resize
+  //   window.addEventListener("resize", handleResize);
 
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   // Clean up event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
   
 
-  useEffect(() => {
-    // Scroll to the top of the outlet when the component mounts or updates
-    window.scrollTo(0, 0);
-  }, [windowUp]);
-  useEffect(() => {
-    // Reload the page only if the screen size changes from mobile to non-mobile or vice versa
-    if (screenChanged) {
-      window.location.reload();
-    }
-  }, [screenChanged]);
+  // useEffect(() => {
+  //   // Scroll to the top of the outlet when the component mounts or updates
+  //   window.scrollTo(0, 0);
+  // }, [windowUp]);
+  // useEffect(() => {
+  //   // Reload the page only if the screen size changes from mobile to non-mobile or vice versa
+  //   if (screenChanged) {
+  //     window.location.reload();
+  //   }
+  // }, [screenChanged]);
 
   var catId = parseInt(useParams().id) ;
   const [refresh, setrefresh] = useState(false) ;
