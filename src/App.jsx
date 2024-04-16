@@ -9,7 +9,7 @@ import {
 import Home from "./Home";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-
+import Error from "./Error";
 import Products from "./Products";
 import Product from "./Product";
 import { useEffect } from "react";
@@ -62,6 +62,10 @@ const router = createBrowserRouter([
         path: "/fail",
         element: <PaymentFailed />,
       },
+      {
+        path: "*",
+        element: <Error />
+      }
     ],
   },
 ]);
