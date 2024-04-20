@@ -7,7 +7,6 @@ import { GrFormPrevious } from "react-icons/gr";
 import Card from "./Card";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-
 import Loader from "./Loader";
 import { clearrelated, setloader } from "./Features/RelatedSlice";
 import { asyncgetrelated } from "./actions/RelatedActions";
