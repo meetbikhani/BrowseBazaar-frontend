@@ -19,6 +19,7 @@
   .swiper {
     width: 100%;
     height: 45vh;
+      margin-top: 20px;
   }
   
   .swiper-slide {
