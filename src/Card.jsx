@@ -23,7 +23,7 @@ const Card = ({ data, id }) => {
   //   onAdd()
   // }, [isInCart]);
   return (
-    <div className="w-80 h-[400px] border-md overflow-hidden flex flex-col rounded-md ">
+    <div className=" w-[360px] h-[400px] border-md overflow-hidden flex flex-col rounded-md">
       <div className="overflow-hidden mx-auto h-[80%]">
         <div className=" w-full overflow-hidden scale-[90%] hover:scale-125 transition-all ease-out">
           <img
@@ -35,8 +35,8 @@ const Card = ({ data, id }) => {
       </div>
       <div className="p-3 flex flex-col bg-zinc-100 ">
         <h2 className="text-base font-semibold mb-2">
-          {data?.attributes?.name?.length >= 30
-            ? data?.attributes?.name?.substring(0, 31) + "..."
+          {data?.attributes?.name?.length >= 28
+            ? data?.attributes?.name?.substring(0, 29) + "..."
             : data?.attributes?.name}
         </h2>
         <div className="flex justify-between">
