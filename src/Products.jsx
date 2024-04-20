@@ -108,6 +108,7 @@ var loc = useLocation();
               min={0}
               value={maxPrice}
               max={1000}
+              className="price-input"
               onChange={(e) => setMaxPrice(e.target.value)}
             />
             <span className="label-text">{maxPrice}</span>
