@@ -23,7 +23,7 @@ const Card = ({ data, id }) => {
   //   onAdd()
   // }, [isInCart]);
   return (
-    <div className=" w-[360px] h-[400px] border-md overflow-hidden flex flex-col rounded-md">
+    <div className=" w-[360px] h-[400px] border-md overflow-hidden flex flex-col rounded-md bg-white">
       <div className="overflow-hidden mx-auto h-[80%]">
         <div className=" w-full overflow-hidden scale-[90%] hover:scale-125 transition-all ease-out">
           <img
