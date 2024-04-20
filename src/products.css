@@ -52,6 +52,28 @@
     font-size: x-large;
   }
 
+.price-input{
+    -webkit-appearance: none;
+    width: 70%;
+    height: 5px;
+    background: #0da3e9;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    /* z-index: 2222; */
+    margin: 9px;
+  }
+  .price-input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    background: #664AFF;
+    border: 1px solid #664AFF;
+    cursor: pointer;
+  }
+
 /* Media query for smaller screens (e.g., mobile) */
 @media screen and (max-width: 630px) {
     .products {
