@@ -63,7 +63,7 @@ const Related = ({ productId, CatId, subCatId }) => {
             spaceBetween: 40,
           },
           '@1.50': {
-            slidesPerView: 4,
+            slidesPerView: 5,
             spaceBetween: 50,
           },
         }}
