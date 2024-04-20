@@ -76,7 +76,7 @@ var loc = useLocation();
 
   return (
     <div className="products mt-20">
-      <div className="left-section pl-8">
+      <div className="left-section pl-5">
         <div className="filterItem">
           <h2 className="font-medium mb-5 filter-title">Product Categories</h2>
           {loader ? <div className="flex items-center justify-center my-10">
@@ -101,7 +101,7 @@ var loc = useLocation();
 
         <div className="filterItem">
           <h2 className="filter-title font-medium mb-5">Filter by price</h2>
-          <div className="flex gap-2">
+          <div className="flex">
             <span className="label-text">0</span>
             <input
               type="range"
