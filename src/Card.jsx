@@ -33,7 +33,7 @@ const Card = ({ data, id }) => {
           />
         </div>
       </div>
-      <div className="p-3 flex flex-col  ">
+      <div className="p-3 flex flex-col bg-white ">
         <h2 className="text-base font-semibold mb-2">
           {data?.attributes?.name?.length >= 28
             ? data?.attributes?.name?.substring(0, 29) + "..."
