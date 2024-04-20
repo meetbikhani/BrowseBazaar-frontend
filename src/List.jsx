@@ -10,7 +10,7 @@ const List = ({ setrefresh, selectedSubCats, catId, maxPrice, sort, setwindowUp 
   const data = useSelector((state) => state.filterproduct.FilterProducts);
   const loader = useSelector((state) => state.filterproduct.loader);
   const dispatch = useDispatch();
-  console.log(data);
+  // console.log(data);
   useEffect(() => {
     dispatch(setloader(true))
     dispatch(
