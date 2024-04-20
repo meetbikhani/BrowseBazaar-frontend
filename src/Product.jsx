@@ -51,6 +51,10 @@ const Product = () => {
     waiter();
   }, [productId, cartdata]);
 
+  useEffect(() => {
+    setQuantity(1);
+  }, [productId]);
+
   const check = () => {
     if (cartdata.length > 0) {
       for (var i = 0; i < cartdata.length; i++) {
