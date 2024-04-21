@@ -75,18 +75,16 @@
 /* Media query for smaller screens (e.g., mobile) */
 @media screen and (max-width: 630px) {
     .products {
-        flex-direction: column;
-        gap: 5px; /* Stack sections vertically */
+        flex-direction: column; /* Stack sections vertically */
     }
 
     .left-section {
         min-width: auto; /* Remove min-width */
         top: 0; /* Align to the top */
         width: 100%; /* Occupy full width */
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
         padding-right: 25px;
-        margin: auto auto;
     }
 
     .right-section {
