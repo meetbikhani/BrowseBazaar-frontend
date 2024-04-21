@@ -15,7 +15,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [searchopen, setSearchOpen] = useState(false);
   const refOne = useRef(null);
-  
+  const [change, setChange] = useState(true)
 
   useEffect(() => {
     const handleOutsideClick = (e) => {
@@ -50,14 +50,14 @@ const Navbar = () => {
         <div className="main2 ">
           <ul className="categories">
             <li className="list">
-              <div className="left  border  focus:outline-none  focus:ring-4  font-medium rounded-full text-sm px-5 pb-1 me-2  bg-gray-800 text-white border-gray-600 hover:bg-gray-700 hover:border-gray-600 focus:ring-gray-700">
+              <div onMouseEnter={() => setChange(true)} className="left  border  focus:outline-none  focus:ring-4  font-medium rounded-full text-sm px-5 pb-1 me-2  bg-gray-800 text-white border-gray-600 hover:bg-gray-700 hover:border-gray-600 focus:ring-gray-700">
                 <p className="cattext">Categories</p>
                 <IoMdArrowDropdown className="drop cursor-pointer" />
               </div>
               <ul className="dropdown rounded-md p-0 overflow-hidden top-10 w-[95%]">
                 {data?.map((item) => {
                   return (
-                    <Link key={item?.id} to={`/products/${item?.id}`}>
+                    <Link onClick={() => setChange((prev) => !prev)} key={item?.id} to={`/products/${item?.id}`}>
                       <li className="w-full h-full" style={{ padding: "10px" }}>
                         {item?.attributes?.name}
                       </li>
