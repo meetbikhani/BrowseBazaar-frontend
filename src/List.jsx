@@ -8,6 +8,7 @@ import { setloader } from "./Features/FilterProductSlice";
 
 const List = ({ selectedSubCats, catId, maxPrice, sort, setwindowUp }) => {
   const data = useSelector((state) => state.filterproduct.FilterProducts);
+  
   const loader = useSelector((state) => state.filterproduct.loader);
   const dispatch = useDispatch();
   console.log(data);
