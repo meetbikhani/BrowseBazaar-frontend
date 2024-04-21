@@ -54,7 +54,7 @@ const Navbar = () => {
                 <p className="cattext">Categories</p>
                 <IoMdArrowDropdown className="drop cursor-pointer" />
               </div>
-              <ul className="dropdown rounded-md p-0 overflow-hidden top-10 w-[95%]">
+              {change ? <ul className="dropdown rounded-md p-0 overflow-hidden top-10 w-[95%]">
                 {data?.map((item) => {
                   return (
                     <Link onClick={() => setChange((prev) => !prev)} key={item?.id} to={`/products/${item?.id}`}>
@@ -64,7 +64,7 @@ const Navbar = () => {
                     </Link>
                   );
                 })}
-              </ul>
+              </ul> : ""}
             </li>
           </ul>
           <Link to={"/"} className="center sm:mr-5">
