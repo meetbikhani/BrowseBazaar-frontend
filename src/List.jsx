@@ -29,7 +29,7 @@ const List = ({ selectedSubCats, catId, maxPrice, sort, setwindowUp }) => {
   return (
     <>
       {loader ? (
-        <div className="flex h-full items-center  justify-center">
+        <div className="flex min-h-[90vh] my-5 items-center  justify-center">
           <Loader />
         </div>
       ) : (
