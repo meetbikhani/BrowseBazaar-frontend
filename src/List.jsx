@@ -33,7 +33,7 @@ const List = ({ selectedSubCats, catId, maxPrice, sort, setwindowUp }) => {
           <Loader />
         </div>
       ) : (
-        <div className="flex flex-wrap gap-10 justify-evenly">
+        <div className="flex min-h-[90vh] flex-wrap gap-10 justify-evenly">
           {data.map((item) => {
             return (
               <Link key={item?.id} to={`/product/${item?.id}`}>
