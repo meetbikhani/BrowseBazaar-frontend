@@ -6,39 +6,37 @@ import { asyncgetfilterproducts } from "./actions/FilterProductActions";
 import Loader from "./Loader";
 import { setloader } from "./Features/FilterProductSlice";
 
-const List = ({ setrefresh, selectedSubCats, catId, maxPrice, sort, setwindowUp }) => {
+const List = ({ selectedSubCats, catId, maxPrice, sort, setwindowUp }) => {
   const data = useSelector((state) => state.filterproduct.FilterProducts);
   const loader = useSelector((state) => state.filterproduct.loader);
   const dispatch = useDispatch();
-  // console.log(data);
+  console.log(data);
   useEffect(() => {
     dispatch(setloader(true))
     dispatch(
       asyncgetfilterproducts(
         `/products?populate=*&[filters][categories][id]=${catId}${selectedSubCats.map(
-          (item) => `&[filters][sub_categories][id][$eq]=${item}&`
+          (item) => &[filters][sub_categories][id][$eq]=${item}&
         )}&[filters][price][$lte]=${maxPrice}${
-          sort ? `&sort=price:${sort}` : ""
+          sort ? &sort=price:${sort} : ""
         }`
       )
     );
   }, [selectedSubCats, catId, maxPrice, sort]);
 
-useEffect(() => {
-    setrefresh((prev) => !prev)
-  }, [catId])
+
 
   return (
     <>
       {loader ? (
-        <div className="flex h-[90vh] items-center  justify-center">
+        <div className="flex min-h-[90vh] items-center  justify-center my-5">
           <Loader />
         </div>
       ) : (
-        <div className="flex min-h-[80vh] flex-wrap gap-10 justify-evenly">
+        <div className="flex flex-wrap gap-10 min-h-[90vh] justify-evenly">
           {data.map((item) => {
             return (
-              <Link key={item?.id} to={`/product/${item?.id}`}>
+              <Link key={item?.id} to={/product/${item?.id}}>
                 <Card id={item?.id} data={item} />
               </Link>
             );
