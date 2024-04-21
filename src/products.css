@@ -76,15 +76,17 @@
 @media screen and (max-width: 630px) {
     .products {
         flex-direction: column; /* Stack sections vertically */
+        gap: 5px;
     }
 
     .left-section {
         min-width: auto; /* Remove min-width */
         top: 0; /* Align to the top */
         width: 100%; /* Occupy full width */
-        flex-direction: row;
+        flex-direction: column;
         text-align: center;
         padding-right: 25px;
+        margin: auto ;
     }
 
     .right-section {
