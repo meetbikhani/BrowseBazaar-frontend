@@ -75,13 +75,13 @@ var loc = useLocation();
 
 
   return (
-    <div className="products mt-20">
+    <div className="products mt-20 flex-col sm:flex-row">
       <div className="left-section pl-5">
         <div className="filterItem">
-          <h2 className="font-medium mb-5 filter-title">Product Categories</h2>
+          <h2 className="font-medium mb-5 max-sm:mb-2 filter-title">Product Categories</h2>
           {loader ? <div className="flex items-center justify-center my-10">
             <Loader />
-          </div> : <>
+          </div> : <div className="flex sm:flex-col max-sm:items-center max-sm:justify-center">
           {data.map((item)=>{
             return <div key={item?.id} className="mb-1 ml-1">
             <input
@@ -96,12 +96,12 @@ var loc = useLocation();
             </label>
           </div>
           })}
-          </>}
+          </div>}
         </div>
 
-        <div className="filterItem">
-          <h2 className="filter-title font-medium mb-5">Filter by price</h2>
-          <div className="flex">
+        <div className="filterItem  max-sm:flex max-sm:items-center max-sm:justify-center">
+          <h2 className="filter-title font-medium mb-5 max-sm:mb-0">Filter by price</h2>
+          <div className="flex max-sm:items-center max-sm:justify-center max-sm:mx-6 ">
             <span className="label-text">0</span>
             <input
               type="range"
@@ -114,9 +114,9 @@ var loc = useLocation();
             <span className="label-text">{maxPrice}</span>
           </div>
         </div>
-        <div className="filterItem">
-          <h2 className="filter-title font-medium mb-5">Sort by Price</h2>
-          <div className="mb-1 ml-1">
+        <div className="filterItem max-sm:flex max-sm:gap-3 max-sm:items-center max-sm:justify-center">
+          <h2 className="filter-title font-medium mb-5 max-sm:mb-0">Sort by Price</h2>
+          <div className="mb-1 max-sm:mb-0 ml-1">
             <input
               className="mr-2 select-box"
               type="radio"
@@ -129,7 +129,7 @@ var loc = useLocation();
               Lowest first
             </label>
           </div>
-          <div className="mb-1 ml-1">
+          <div className="mb-1 max-sm:mb-0 ml-1">
             <input
               className="mr-2 select-box"
               type="radio"
@@ -145,7 +145,7 @@ var loc = useLocation();
         </div>
       </div>
       <div className="right-section">
-        <List setrefresh={setrefresh} selectedSubCats={selectedSubCats} catId={catId} maxPrice={maxPrice} sort={sort} setwindowUp={setwindowUp} />
+        <List selectedSubCats={selectedSubCats} catId={catId} maxPrice={maxPrice} sort={sort} setwindowUp={setwindowUp} />
       </div>
     </div>
   );
