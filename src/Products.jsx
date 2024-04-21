@@ -101,7 +101,7 @@ var loc = useLocation();
 
         <div className="filterItem max-sm:flex max-sm:item-center max-sm:justify-center">
           <h2 className="filter-title font-medium mb-5 max-sm:mb-0">Filter by price</h2>
-          <div className="flex">
+          <div className="flex max-sm:item-center max-sm:justify-center max-sm:mx-6">
             <span className="label-text">0</span>
             <input
               type="range"
@@ -114,8 +114,8 @@ var loc = useLocation();
             <span className="label-text">{maxPrice}</span>
           </div>
         </div>
-        <div className="filterItem">
-          <h2 className="filter-title font-medium mb-5">Sort by Price</h2>
+        <div className="filterItem max-sm:flex max-sm:gap-3 max-sm:item-center max-sm:justify-center">
+          <h2 className="filter-title font-medium mb-5 max-sm:mb-0">Sort by Price</h2>
           <div className="mb-1 ml-1 max-sm:mb-0">
             <input
               className="mr-2 select-box"
