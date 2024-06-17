@@ -16,7 +16,7 @@ const Loader = () => {
         <circle class="back" cx="17" cy="17" r="14"></circle>
         <circle class="front" cx="17" cy="17" r="14"></circle>
     </svg>
-    <div class="text" data-text="Loading"></div>
+    <div class="text" data-text="Loading..This may take a minute as the service is hosted on a free platform."></div>
 </div>
   )
 }
