@@ -22,7 +22,7 @@ const List = ({ selectedSubCats, catId, maxPrice, sort, setwindowUp }) => {
         }`
       )
     );
-  }, [selectedSubCats, catId, maxPrice, sort]);
+  }, [selectedSubCats, maxPrice, sort]);
 
 
 
